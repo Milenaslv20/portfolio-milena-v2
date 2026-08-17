@@ -1,0 +1,306 @@
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG1010: 'imports' must be an array of components, directives, pipes, or NgModules.
+  Value could not be determined statically.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.ts:123:26:
+[37m      123 │   imports: [CommonModule, [32mFormsModule[37m],
+          ╵                           [32m~~~~~~~~~~~[0m
+
+  Unknown reference.
+
+    src/app/app.ts:123:26:
+[37m      123 │   imports: [CommonModule, [32mFormsModule[37m],
+          ╵                           [32m~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'FormsModule'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.ts:123:26:
+[37m      123 │   imports: [CommonModule, [32mFormsModule[37m],
+          ╵                           [32m~~~~~~~~~~~[0m
+
+[39m[22m
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2353: Object literal may only specify known properties, and 'sendLabel' does not exist in type '{ title: string; subtitle: string; emailLabel: string; phoneLabel: string; locationLabel: string; linkedinLabel: string; }'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.ts:57:6:
+[37m      57 │       [32msendLabel[37m: 'Enviar Mensagem',
+         ╵       [32m~~~~~~~~~[0m
+
+  The expected type comes from property 'contact' which is declared here on type 'Translation'
+
+    src/app/app.ts:17:2:
+[37m      17 │   [32mcontact[37m: { title: string; subtitle: string; emailLabel: string; ...
+         ╵   [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2353: Object literal may only specify known properties, and 'sendLabel' does not exist in type '{ title: string; subtitle: string; emailLabel: string; phoneLabel: string; locationLabel: string; linkedinLabel: string; }'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.ts:105:6:
+[37m      105 │       [32msendLabel[37m: 'Send Message',
+          ╵       [32m~~~~~~~~~[0m
+
+  The expected type comes from property 'contact' which is declared here on type 'Translation'
+
+    src/app/app.ts:17:2:
+[37m      17 │   [32mcontact[37m: { title: string; subtitle: string; emailLabel: string; ...
+         ╵   [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG1010: 'imports' must be an array of components, directives, pipes, or NgModules.
+  Value could not be determined statically.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.ts:123:26:
+[37m      123 │   imports: [CommonModule, [32mFormsModule[37m],
+          ╵                           [32m~~~~~~~~~~~[0m
+
+  Unknown reference.
+
+    src/app/app.ts:123:26:
+[37m      123 │   imports: [CommonModule, [32mFormsModule[37m],
+          ╵                           [32m~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'FormsModule'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.ts:123:26:
+[37m      123 │   imports: [CommonModule, [32mFormsModule[37m],
+          ╵                           [32m~~~~~~~~~~~[0m
+
+[39m[22m
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2353: Object literal may only specify known properties, and 'sendLabel' does not exist in type '{ title: string; subtitle: string; emailLabel: string; phoneLabel: string; locationLabel: string; linkedinLabel: string; }'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.ts:99:6:
+[37m      99 │       [32msendLabel[37m: 'Send Message',
+         ╵       [32m~~~~~~~~~[0m
+
+  The expected type comes from property 'contact' which is declared here on type 'Translation'
+
+    src/app/app.ts:17:2:
+[37m      17 │   [32mcontact[37m: { title: string; subtitle: string; emailLabel: string; ...
+         ╵   [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG1010: 'imports' must be an array of components, directives, pipes, or NgModules.
+  Value could not be determined statically.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.ts:117:26:
+[37m      117 │   imports: [CommonModule, [32mFormsModule[37m],
+          ╵                           [32m~~~~~~~~~~~[0m
+
+  Unknown reference.
+
+    src/app/app.ts:117:26:
+[37m      117 │   imports: [CommonModule, [32mFormsModule[37m],
+          ╵                           [32m~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'FormsModule'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.ts:117:26:
+[37m      117 │   imports: [CommonModule, [32mFormsModule[37m],
+          ╵                           [32m~~~~~~~~~~~[0m
+
+[39m[22m
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG1010: 'imports' must be an array of components, directives, pipes, or NgModules.
+  Value could not be determined statically.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.ts:111:26:
+[37m      111 │   imports: [CommonModule, [32mFormsModule[37m],
+          ╵                           [32m~~~~~~~~~~~[0m
+
+  Unknown reference.
+
+    src/app/app.ts:111:26:
+[37m      111 │   imports: [CommonModule, [32mFormsModule[37m],
+          ╵                           [32m~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'FormsModule'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.ts:111:26:
+[37m      111 │   imports: [CommonModule, [32mFormsModule[37m],
+          ╵                           [32m~~~~~~~~~~~[0m
+
+[39m[22m
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'onSubmit' does not exist on type 'App'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.html:83:47:
+[37m      83 │ ...lass="contact-form" (ngSubmit)="[32monSubmit[37m()" #contactForm="ngForm">
+         ╵                                    [32m~~~~~~~~[0m
+
+  Error occurs in the template of component App.
+
+    src/app/app.ts:112:15:
+[37m      112 │   templateUrl: [32m'./app.html'[37m,
+          ╵                [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG8003: No directive found with exportAs 'ngForm'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.html:83:73:
+[37m      83 │ ...lass="contact-form" (ngSubmit)="onSubmit()" #contactForm="[32mngForm[37m">
+         ╵                                                              [32m~~~~~~[0m
+
+  Error occurs in the template of component App.
+
+    src/app/app.ts:112:15:
+[37m      112 │   templateUrl: [32m'./app.html'[37m,
+          ╵                [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'nameLabel' does not exist on type '{ title: string; subtitle: string; emailLabel: string; phoneLabel: string; locationLabel: string; linkedinLabel: string; }'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.html:85:31:
+[37m      85 │             <span>{{ t.contact.[32mnameLabel[37m }}</span>
+         ╵                                [32m~~~~~~~~~[0m
+
+  Error occurs in the template of component App.
+
+    src/app/app.ts:112:15:
+[37m      112 │   templateUrl: [32m'./app.html'[37m,
+          ╵                [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'namePlaceholder' does not exist on type '{ title: string; subtitle: string; emailLabel: string; phoneLabel: string; locationLabel: string; linkedinLabel: string; }'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.html:86:69:
+[37m      86 │ ...e="name" placeholder="{{ t.contact.[32mnamePlaceholder[37m }}" required />
+         ╵                                       [32m~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component App.
+
+    src/app/app.ts:112:15:
+[37m      112 │   templateUrl: [32m'./app.html'[37m,
+          ╵                [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'messageLabel' does not exist on type '{ title: string; subtitle: string; emailLabel: string; phoneLabel: string; locationLabel: string; linkedinLabel: string; }'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.html:89:31:
+[37m      89 │             <span>{{ t.contact.[32mmessageLabel[37m }}</span>
+         ╵                                [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component App.
+
+    src/app/app.ts:112:15:
+[37m      112 │   templateUrl: [32m'./app.html'[37m,
+          ╵                [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'messagePlaceholder' does not exist on type '{ title: string; subtitle: string; emailLabel: string; phoneLabel: string; locationLabel: string; linkedinLabel: string; }'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.html:90:72:
+[37m      90 │ ...ceholder="{{ t.contact.[32mmessagePlaceholder[37m }}" required></textarea>
+         ╵                           [32m~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component App.
+
+    src/app/app.ts:112:15:
+[37m      112 │   templateUrl: [32m'./app.html'[37m,
+          ╵                [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'sendLabel' does not exist on type '{ title: string; subtitle: string; emailLabel: string; phoneLabel: string; locationLabel: string; linkedinLabel: string; }'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.html:92:57:
+[37m      92 │ ...utton type="submit" class="btn">{{ t.contact.[32msendLabel[37m }}</button>
+         ╵                                                 [32m~~~~~~~~~[0m
+
+  Error occurs in the template of component App.
+
+    src/app/app.ts:112:15:
+[37m      112 │   templateUrl: [32m'./app.html'[37m,
+          ╵                [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'submitted' does not exist on type 'App'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.html:93:41:
+[37m      93 │ ...lass="form-success" *ngIf="[32msubmitted[37m">{{ t.contact.sentMessage ...
+         ╵                               [32m~~~~~~~~~[0m
+
+  Error occurs in the template of component App.
+
+    src/app/app.ts:112:15:
+[37m      112 │   templateUrl: [32m'./app.html'[37m,
+          ╵                [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'sentMessage' does not exist on type '{ title: string; subtitle: string; emailLabel: string; phoneLabel: string; locationLabel: string; linkedinLabel: string; }'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.html:93:65:
+[37m      93 │ ...s="form-success" *ngIf="submitted">{{ t.contact.[32msentMessage[37m }}</p>
+         ╵                                                    [32m~~~~~~~~~~~[0m
+
+  Error occurs in the template of component App.
+
+    src/app/app.ts:112:15:
+[37m      112 │   templateUrl: [32m'./app.html'[37m,
+          ╵                [32m~~~~~~~~~~~~[0m
+
+[39m[22m
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'skills' does not exist on type 'App'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.html:36:52:
+[37m      36 │ ...ill reveal" *ngFor="let s of [32mskills[37m; let i = index" [style.anim...
+         ╵                                 [32m~~~~~~[0m
+
+  Error occurs in the template of component App.
+
+    src/app/app.ts:112:15:
+[37m      112 │   templateUrl: [32m'./app.html'[37m,
+          ╵                [32m~~~~~~~~~~~~[0m
+
+[39m[22m
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'ViewChild'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.ts:126:3:
+[37m      126 │   @[32mViewChild[37m('projectsCarousel') private projectsCarousel!: Eleme...
+          ╵    [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2552: Cannot find name 'ElementRef'. Did you mean 'Element'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.ts:126:60:
+[37m      126 │ ...ctsCarousel') private projectsCarousel!: [32mElementRef[37m<HTMLElement>;
+          ╵                                             [32m~~~~~~~~~~[0m
+
+  'Element' is declared here.
+
+    node_modules/typescript/lib/lib.dom.d.ts:11110:12:
+[37m      11110 │ declare var [32mElement[37m: {
+            ╵             [32m~~~~~~~[0m
+
+[39m[22m
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'projectsCarousel' does not exist on type 'App'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.ts:155:20:
+[37m      155 │     const el = this.[32mprojectsCarousel[37m?.nativeElement;
+          ╵                     [32m~~~~~~~~~~~~~~~~[0m
+
+[39m[22m
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'scrollProjects' does not exist on type 'App'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.html:69:48:
+[37m      69 │ ...="carousel-btn" (click)="[32mscrollProjects[37m(-1)" aria-label="Anteri...
+         ╵                             [32m~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component App.
+
+    src/app/app.ts:118:15:
+[37m      118 │   templateUrl: [32m'./app.html'[37m,
+          ╵                [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'scrollProjects' does not exist on type 'App'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.html:74:48:
+[37m      74 │ ...="carousel-btn" (click)="[32mscrollProjects[37m(1)" aria-label="Próximo">
+         ╵                             [32m~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component App.
+
+    src/app/app.ts:118:15:
+[37m      118 │   templateUrl: [32m'./app.html'[37m,
+          ╵                [32m~~~~~~~~~~~~[0m
+
+[39m[22m
