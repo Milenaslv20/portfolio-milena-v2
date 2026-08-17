@@ -12,7 +12,7 @@ export interface Project {
 export interface Translation {
   nav: { about: string; projects: string; contact: string; thanks: string };
   hero: { subtitle: string; cta: string; ctaLink: string };
-  about: { title: string; lang: string; paragraphs: string[]; skills: string };
+  about: { title: string; lang: string; paragraphs: string[]; skills: string; langs: string };
   projects: { title: string; subtitle: string; items: Project[] };
   contact: { title: string; subtitle: string; emailLabel: string; phoneLabel: string; locationLabel: string; linkedinLabel: string };
   thanks: { title: string; message: string; cta: string };
@@ -31,6 +31,7 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
     about: {
       title: 'Sobre Mim',
       lang: 'Idiomas',
+      langs: 'Inglês',
       paragraphs: [
         'Profissional em Análise e Desenvolvimento de Sistemas com experiência no desenvolvimento de aplicações web fullstack, visualização e modelagem de bancos de dados. Entusiasta de tecnologia, resolução de problemas e otimização de processos, em busca de aprendizado contínuo.',
       ],
@@ -61,7 +62,7 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
       message: 'Agradeço por dedicar seu tempo para conhecer meu trabalho. Seu interesse é muito importante para mim.',
       cta: 'Voltar ao topo'
     },
-    footer: '© 2026 Milena Medeiros — Desenvolvido com Angular.'
+    footer: '© 2026 Por Milena Medeiros'
   },
 
   en: {
@@ -75,6 +76,7 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
     about: {
       title: 'About Me',
       lang: 'Languages',
+      langs: 'English',
       paragraphs: [
         'I work with web development building responsive, performant applications with a strong focus on accessibility.',
         'I have experience with Angular, TypeScript, HTML, CSS and SCSS, always pursuing best practices and clean code.',
@@ -107,7 +109,7 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
       message: 'I appreciate you taking the time to learn about my work. Your interest means a lot to me.',
       cta: 'Back to top'
     },
-    footer: '© 2026 Milena Medeiros — Built with Angular.'
+    footer: '© 2026 By Milena Medeiros'
   }
 };
 
