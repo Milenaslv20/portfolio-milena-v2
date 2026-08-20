@@ -13,7 +13,7 @@ export interface Translation {
   nav: { about: string; projects: string; contact: string; thanks: string };
   hero: { subtitle: string; cta: string; ctaLink: string };
   about: { title: string; lang: string; paragraphs: string[]; skills: string; langs: string };
-  projects: { title: string; subtitle: string; items: Project[] };
+  projects: { title: string; items: Project[] };
   contact: { title: string; subtitle: string; emailLabel: string; phoneLabel: string; locationLabel: string; linkedinLabel: string };
   thanks: { title: string; message: string; cta: string };
   footer: string;
@@ -39,7 +39,6 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
     },
     projects: {
       title: 'Projetos',
-      subtitle: 'Alguns trabalhos e projetos que desenvolvi.',
       items: [
         { name: 'E-commerce Moderno', description: 'Loja virtual completa com carrinho de compras, filtros avançados e checkout integrado.', tags: ['Angular', 'TypeScript', 'SCSS'] },
         { name: 'Dashboard Analytics', description: 'Painel de métricas em tempo real com gráficos interativos e exportação de relatórios.', tags: ['Angular', 'Charts', 'REST API'] },
@@ -51,7 +50,7 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
     },
     contact: {
       title: 'Contato',
-      subtitle: 'Vamos conversar? Fale comigo pelos canais abaixo.',
+      subtitle: 'Gostou ou tem alguma dúvida? Fique à vontade para entrar em contato! Você pode me encontrar pelos seguintes canais',
       emailLabel: 'E-mail',
       phoneLabel: 'Telefone',
       locationLabel: 'Localização',
@@ -59,7 +58,7 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
     },
     thanks: {
       title: 'Obrigada!',
-      message: 'Agradeço por dedicar seu tempo para conhecer meu trabalho. Seu interesse é muito importante para mim.',
+      message: 'Agradeço sua visita! A tecnologia tem o poder de conectar pessoas, transformar ideias em realidade e criar soluções que fazem a diferença. Cada projeto compartilhado representa uma oportunidade de aprendizado e evolução. Agradeço por acompanhar meu trabalho e opiniões e sugestões são sempre muito bem-vindas!',
       cta: 'Voltar ao topo'
     },
     footer: '© 2026 Por Milena Medeiros'
@@ -86,7 +85,6 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
     },
     projects: {
       title: 'Projects',
-      subtitle: 'Some of the work and projects I have developed.',
       items: [
         { name: 'Modern E-commerce', description: 'Full online store with shopping cart, advanced filters and integrated checkout.', tags: ['Angular', 'TypeScript', 'SCSS'] },
         { name: 'Analytics Dashboard', description: 'Real-time metrics panel with interactive charts and report export.', tags: ['Angular', 'Charts', 'REST API'] },
@@ -98,15 +96,15 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
     },
     contact: {
       title: 'Contact',
-      subtitle: 'Let’s talk? Reach me through the channels below.',
+      subtitle: 'Did you liked or have some doubt? Feel free to contact me! You can find me on the following channels',
       emailLabel: 'E-mail',
       phoneLabel: 'Phone',
       locationLabel: 'Location',
       linkedinLabel: 'LinkedIn'
     },
     thanks: {
-      title: 'Thank You!',
-      message: 'I appreciate you taking the time to learn about my work. Your interest means a lot to me.',
+      title: 'Thanks',
+      message: 'Thanks for your visit, the technology have the power to connect people, change ideas to reality and create solutions that make the differece. Each shared project represents an oportunity of learning and evolution. Thanks for keep up with my work and opinions and suggestions are always welcome!',
       cta: 'Back to top'
     },
     footer: '© 2026 By Milena Medeiros'

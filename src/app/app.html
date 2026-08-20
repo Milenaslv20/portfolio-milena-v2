@@ -64,7 +64,6 @@
   <section id="projetos" class="section section-alt">
     <div class="container">
       <h2 class="section-title-left reveal">{{ t.projects.title }}</h2>
-      <p class="section-intro-left reveal">{{ t.projects.subtitle }}</p>
       <div class="cards">
         <article class="card reveal" *ngFor="let project of t.projects.items; let i = index"
           [class.reveal-left]="i % 2 === 0"
