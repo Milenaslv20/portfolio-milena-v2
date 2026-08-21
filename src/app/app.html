@@ -71,11 +71,14 @@
           <div class="card-media">
             <img [src]="'images/project-' + (i + 1) + '.svg'" [alt]="project.name" />
           </div>
-          <div class="card-body">
-            <h3 class="card-title">{{ project.name }}</h3>
-            <p class="card-text">{{ project.description }}</p>
-            <div class="card-tags">
-              <span class="tag" *ngFor="let tag of project.tags">{{ tag }}</span>
+
+          <div class="card-body"> <!--style="background-image: url('images/mountain.png');"-->
+            <div class="texts">
+              <h3 class="card-title">{{ project.name }}</h3>
+              <p class="card-text">{{ project.description }}</p>
+              <div class="card-tags">
+                <span class="tag" *ngFor="let tag of project.tags">{{ tag }}</span>
+              </div>
             </div>
           </div>
         </article>

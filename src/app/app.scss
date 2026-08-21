@@ -4,6 +4,11 @@ $surface: #2d2d2d;
 $text: #fff;
 $accent: #000;
 
+$purple: #6A1E55;
+$white_purple: #be6190;
+
+$orange: #E6501B;
+
 :host {
   display: block;
   color: $text;
@@ -108,7 +113,7 @@ img {
       bottom: -2px;
       width: 100%;
       height: 2px;
-      background: $text;
+      background: $orange;
       transform: scaleX(0);
       transform-origin: left;
       transition: transform 0.3s ease;
@@ -319,7 +324,7 @@ img {
     bottom: -8px;
     width: 56px;
     height: 3px;
-    background: $text;
+    background: $orange;
     border-radius: 2px;
   }
 }
@@ -437,7 +442,7 @@ img {
 
   &:hover {
     transform: translateY(-8px);
-    box-shadow: 0 16px 32px rgba($accent, 0.55);
+    box-shadow: 0 16px 32px rgba($orange, 0.55);
     border-color: rgba($text, 0.25);
 
     .card-media img {
@@ -461,6 +466,25 @@ img {
     display: flex;
     flex-direction: column;
     flex: 1;
+
+    /*
+    filter: blur(10px);
+    transform: scale(1.2); /* evita ver as bordas nítidas do blur
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 0;
+    */
+  }
+
+  /*
+  .card-body:hover{
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+  */
+
+  .texts{
+    z-index: 1;
   }
 
   .card-title {
@@ -518,12 +542,12 @@ img {
 
   &:hover {
     transform: translateX(8px);
-    box-shadow: 0 12px 24px rgba($accent, 0.5);
+    box-shadow: 0 9px 24px rgba($orange, 0.4);
     border-color: rgba($text, 0.3);
 
     .contact-icon {
       transform: scale(1.1) rotate(6deg);
-      background: $text;
+      background: #ffbba2;
       color: $bg;
       box-shadow: 0 0 20px rgba($text, 0.3);
     }
