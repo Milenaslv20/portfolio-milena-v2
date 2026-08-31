@@ -3,15 +3,13 @@ $bg: #1f2020;
 $surface: #2d2d2d;
 $text: #fff;
 $accent: #000;
-
-$purple: #6A1E55;
-$white_purple: #be6190;
-
 $orange: #E6501B;
+$blue: #3b82f6;
 
 :host {
   display: block;
   color: $text;
+  overflow-x: hidden;
 }
 
 * {
@@ -39,6 +37,8 @@ img {
   max-width: 100%;
   display: block;
 }
+
+
 
 // ---------- Scroll reveal ----------
 .reveal {
@@ -80,7 +80,7 @@ img {
 }
 
 .brand {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: $text;
   padding: 0.25rem 0.6rem;
@@ -99,7 +99,7 @@ img {
   justify-content: space-evenly;
 
   a {
-    font-size: 0.95rem;
+    font-size: 1rem;
     cursor: pointer;
     padding: 0.35rem 0;
     position: relative;
@@ -113,10 +113,10 @@ img {
       bottom: -2px;
       width: 100%;
       height: 2px;
-      background: $orange;
+      background: linear-gradient(90deg, #7c3aed, #ec4899);
       transform: scaleX(0);
       transform-origin: left;
-      transition: transform 0.3s ease;
+      transition: transform 0.35s ease;
     }
 
     &:hover {
@@ -125,6 +125,20 @@ img {
       &::after {
         transform: scaleX(1);
       }
+    }
+
+    &.active {
+      color: $text;
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid $orange;
+      outline-offset: 4px;
+      border-radius: 2px;
     }
   }
 }
@@ -161,24 +175,52 @@ img {
 
     color: $bg;
   }
+
+  &:focus-visible {
+    outline: 2px solid $orange;
+    outline-offset: 2px;
+  }
 }
 
 // ---------- Hero ----------
 .hero {
   position: relative;
   padding: 7rem 1.5rem 6rem;
-  overflow: hidden;
+  overflow: visible;
 
-  .hero-glow {
+  .hero-orb {
     position: absolute;
-    top: -40%;
-    right: -20%;
-    width: 800px;
-    height: 800px;
-    background: radial-gradient(circle, rgba($surface, 0.9) 0%, transparent 60%);
-    filter: blur(40px);
+    border-radius: 50%;
+    filter: blur(100px);
     z-index: 0;
-    animation: float 8s ease-in-out infinite;
+    pointer-events: none;
+
+    &--purple {
+      width: 600px;
+      height: 600px;
+      top: -25%;
+      left: -10%;
+      background: radial-gradient(circle, rgba(#7c3aed, 0.4) 0%, transparent 70%);
+      animation: float 10s ease-in-out infinite;
+    }
+
+    &--pink {
+      width: 500px;
+      height: 500px;
+      top: -10%;
+      right: -5%;
+      background: radial-gradient(circle, rgba(#ec4899, 0.35) 0%, transparent 70%);
+      animation: float 12s ease-in-out infinite reverse;
+    }
+
+    &--blue {
+      width: 550px;
+      height: 550px;
+      bottom: -30%;
+      left: 30%;
+      background: radial-gradient(circle, rgba(#3b82f6, 0.3) 0%, transparent 70%);
+      animation: float 9s ease-in-out infinite 2s;
+    }
   }
 
   .container {
@@ -293,6 +335,12 @@ img {
 
     color: $bg;
   }
+
+  &:focus-visible {
+    outline: 2px solid $orange;
+    outline-offset: 3px;
+    box-shadow: 0 0 16px rgba($orange, 0.3);
+  }
 }
 
 // ---------- Layout ----------
@@ -304,6 +352,42 @@ img {
 
 .section {
   padding: 5rem 0;
+}
+
+.section--orbs {
+  position: relative;
+  overflow: visible;
+
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: 0;
+    pointer-events: none;
+
+    &--purple {
+      width: 500px;
+      height: 500px;
+      top: -15%;
+      right: -10%;
+      background: radial-gradient(circle, rgba(#7c3aed, 0.25) 0%, transparent 70%);
+      animation: float 11s ease-in-out infinite;
+    }
+
+    &--pink {
+      width: 450px;
+      height: 450px;
+      bottom: -20%;
+      left: -8%;
+      background: radial-gradient(circle, rgba(#ec4899, 0.2) 0%, transparent 70%);
+      animation: float 13s ease-in-out infinite reverse;
+    }
+  }
+
+  > .container {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .section-alt {
@@ -324,7 +408,7 @@ img {
     bottom: -8px;
     width: 56px;
     height: 3px;
-    background: $orange;
+    background: $blue;
     border-radius: 2px;
   }
 }
@@ -411,8 +495,8 @@ img {
   border: 1px solid rgba($text, 0.12);
   padding: 0.45rem 1.1rem;
   border-radius: 999px;
-  font-size: 0.9rem;
-  cursor: default;
+  font-size: 0.8rem;
+  font-weight: 600;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 
   &:hover {
@@ -432,25 +516,54 @@ img {
 }
 
 .card {
-  background: $bg;
+  position: relative;
   border: 1px solid rgba($text, 0.1);
   border-radius: 16px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 
   &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 16px 32px rgba($orange, 0.55);
-    border-color: rgba($text, 0.25);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba($blue, 0.4);
+    border-color: rgba($text, 0.2);
 
-    .card-media img {
-      transform: scale(1.05);
+    .card-bg img {
+      transform: scale(1.08);
+      filter: blur(12px) brightness(0.45);
+      opacity: 1;
+    }
+
+    .card-body {
+      background: rgba($bg, 0.55);
+    }
+
+    .card-links {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .card-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: blur(0px) brightness(0.35);
+      opacity: 0;
+      transform: scale(1);
+      transition: transform 0.6s ease, filter 0.6s ease, opacity 0.6s ease;
     }
   }
 
   .card-media {
+    position: relative;
+    z-index: 1;
     overflow: hidden;
     border-bottom: 1px solid rgba($text, 0.08);
 
@@ -461,30 +574,24 @@ img {
     }
   }
 
+  &:hover .card-media img {
+    transform: scale(1.05);
+  }
+
   .card-body {
+    position: relative;
+    z-index: 1;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
     flex: 1;
-
-    /*
-    filter: blur(10px);
-    transform: scale(1.2); /* evita ver as bordas nítidas do blur
-    opacity: 0;
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    z-index: 0;
-    */
+    background: $bg;
+    transition: background 0.5s ease;
   }
 
-  /*
-  .card-body:hover{
-    opacity: 0.6;
-    transform: scale(1.1);
-  }
-  */
-
-  .texts{
+  .texts {
     z-index: 1;
+    flex: 1;
   }
 
   .card-title {
@@ -505,10 +612,51 @@ img {
     gap: 0.5rem;
   }
 
+  .card-links {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba($text, 0.1);
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s;
+  }
+
+  .card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: $text;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $orange;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $orange;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+  }
+
+  .card-link-arrow {
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+  }
+
+  .card-link:hover .card-link-arrow {
+    transform: translateX(3px);
+  }
+
   .tag {
     background: $surface;
     border: 1px solid rgba($text, 0.1);
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     padding: 0.25rem 0.7rem;
     border-radius: 999px;
     opacity: 0.95;
@@ -518,6 +666,24 @@ img {
       background: $text;
       color: $bg;
     }
+  }
+}
+
+// ---------- Skip link ----------
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: $orange;
+  color: $text;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0 0 8px 8px;
+  font-weight: 600;
+  z-index: 100;
+  transition: top 0.2s ease;
+
+  &:focus {
+    top: 0;
   }
 }
 
@@ -542,15 +708,20 @@ img {
 
   &:hover {
     transform: translateX(8px);
-    box-shadow: 0 9px 24px rgba($orange, 0.4);
+    box-shadow: 0 9px 24px rgba($blue, 0.4);
     border-color: rgba($text, 0.3);
 
     .contact-icon {
       transform: scale(1.1) rotate(6deg);
-      background: #ffbba2;
-      color: $bg;
+      background: rgba($blue, 0.25);
+      color: $text;
       box-shadow: 0 0 20px rgba($text, 0.3);
     }
+  }
+
+  &:focus-visible {
+    outline: 2px solid $orange;
+    outline-offset: 2px;
   }
 
   .contact-icon {
@@ -701,7 +872,7 @@ img {
     width: 80%;
 
     a {
-      font-size: 0.85rem;
+      font-size: 0.9rem;
     }
   }
 
@@ -716,5 +887,50 @@ img {
 
   .brand{
     display: none;
+  }
+}
+
+// ---------- Reduced motion ----------
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hero-glow,
+  .hero-orb,
+  .orb,
+  .hero-media .media-frame img,
+  .thanks-media img {
+    animation: none;
+  }
+
+  .header {
+    animation: none;
+  }
+
+  .media-frame img {
+    transition: none;
+  }
+
+  .card {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+
+    .card-bg img {
+      transition: none;
+    }
+
+    .card-body {
+      transition: none;
+    }
+
+    .card-links {
+      transition: none;
+    }
   }
 }

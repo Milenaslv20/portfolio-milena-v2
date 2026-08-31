@@ -1,13 +1,15 @@
+<a class="skip-link" href="#sobre">Skip to content</a>
+
 <header class="header">
   <div class="header-inner">
     <a class="brand" href="#" (click)="scrollTo('inicio'); $event.preventDefault()">Milena Medeiros</a>
-    <nav class="nav">
+    <nav class="nav" aria-label="Main navigation">
       <a (click)="scrollTo('sobre'); $event.preventDefault()">{{ t.nav.about }}</a>
       <a (click)="scrollTo('projetos'); $event.preventDefault()">{{ t.nav.projects }}</a>
       <a (click)="scrollTo('contato'); $event.preventDefault()">{{ t.nav.contact }}</a>
       <a (click)="scrollTo('agradecimento'); $event.preventDefault()">{{ t.nav.thanks }}</a>
     </nav>
-    <button class="lang-toggle" (click)="toggleLang()" aria-label="Toggle language">
+    <button class="lang-toggle" (click)="toggleLang()" [attr.aria-label]="lang() === 'pt' ? 'Switch to English' : 'Mudar para Português'" [attr.aria-pressed]="lang() === 'en'">
       {{ lang() === 'pt' ? 'EN' : 'PT' }}
     </button>
   </div>
@@ -15,11 +17,14 @@
 
 <main>
   <section id="inicio" class="hero">
-    <div class="hero-glow"></div>
+    <div class="hero-orb hero-orb--purple"></div>
+    <div class="hero-orb hero-orb--pink"></div>
+    <div class="hero-orb hero-orb--blue"></div>
     <div class="container">
       <div class="hero-inner">
         <div class="hero-text">
           <p class="hero-badge reveal">{{ lang() === 'pt' ? 'Milena\'s Portfólio' : 'Milena\'s Portfolio' }}</p>
+          <h1 class="hero-title reveal">{{ t.hero.title }}</h1>
           <p class="hero-subtitle reveal">{{ t.hero.subtitle }}</p>
           <div class="hero-actions reveal">
             <a class="btn" href="{{ t.hero.ctaLink }}">{{ t.hero.cta }}</a>
@@ -34,7 +39,9 @@
     </div>
   </section>
 
-  <section id="sobre" class="section" id="sobre-mim">
+  <section id="sobre" class="section section--orbs">
+    <div class="orb orb--purple"></div>
+    <div class="orb orb--pink"></div>
     <div class="container">
       <h2 class="section-title-left reveal">{{ t.about.title }}</h2>
       <div class="split-grid">
@@ -68,17 +75,28 @@
         <article class="card reveal" *ngFor="let project of t.projects.items; let i = index"
           [class.reveal-left]="i % 2 === 0"
           [class.reveal-right]="i % 2 === 1">
+          <div class="card-bg">
+            <img *ngIf="project.bgImage" [src]="project.bgImage" alt="" />
+          </div>
           <div class="card-media">
             <img [src]="'images/project-' + (i + 1) + '.svg'" [alt]="project.name" />
           </div>
 
-          <div class="card-body"> <!--style="background-image: url('images/mountain.png');"-->
+          <div class="card-body">
             <div class="texts">
               <h3 class="card-title">{{ project.name }}</h3>
               <p class="card-text">{{ project.description }}</p>
               <div class="card-tags">
                 <span class="tag" *ngFor="let tag of project.tags">{{ tag }}</span>
               </div>
+            </div>
+            <div class="card-links" *ngIf="project.liveUrl || project.repoUrl">
+              <a class="card-link" *ngIf="project.liveUrl" [href]="project.liveUrl" target="_blank" rel="noopener">
+                {{ lang() === 'pt' ? 'Ver Projeto' : 'View Project' }} <span class="card-link-arrow">&rsaquo;</span>
+              </a>
+              <a class="card-link card-link--outline" *ngIf="project.repoUrl" [href]="project.repoUrl" target="_blank" rel="noopener">
+                {{ lang() === 'pt' ? 'Código' : 'Code' }}
+              </a>
             </div>
           </div>
         </article>
