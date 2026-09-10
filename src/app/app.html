@@ -3,16 +3,24 @@
 <header class="header">
   <div class="header-inner">
     <a class="brand" href="#" (click)="scrollTo('inicio'); $event.preventDefault()">Milena Medeiros</a>
-    <nav class="nav" aria-label="Main navigation">
-      <a (click)="scrollTo('sobre'); $event.preventDefault()">{{ t.nav.about }}</a>
-      <a (click)="scrollTo('projetos'); $event.preventDefault()">{{ t.nav.projects }}</a>
-      <a (click)="scrollTo('contato'); $event.preventDefault()">{{ t.nav.contact }}</a>
-      <a (click)="scrollTo('agradecimento'); $event.preventDefault()">{{ t.nav.thanks }}</a>
-    </nav>
-    <button class="lang-toggle" (click)="toggleLang()" [attr.aria-label]="lang() === 'pt' ? 'Switch to English' : 'Mudar para Português'" [attr.aria-pressed]="lang() === 'en'">
-      {{ lang() === 'pt' ? 'EN' : 'PT' }}
+    <div class="header-controls" [class.is-open]="menuOpen()" [attr.aria-hidden]="!menuOpen()">
+      <nav class="nav" aria-label="Main navigation">
+        <a (click)="scrollTo('sobre'); $event.preventDefault()">{{ t.nav.about }}</a>
+        <a (click)="scrollTo('projetos'); $event.preventDefault()">{{ t.nav.projects }}</a>
+        <a (click)="scrollTo('contato'); $event.preventDefault()">{{ t.nav.contact }}</a>
+        <a (click)="scrollTo('agradecimento'); $event.preventDefault()">{{ t.nav.thanks }}</a>
+      </nav>
+      <button class="lang-toggle" (click)="toggleLang()" [attr.aria-label]="lang() === 'pt' ? 'Switch to English' : 'Mudar para Português'" [attr.aria-pressed]="lang() === 'en'">
+        {{ lang() === 'pt' ? 'EN' : 'PT' }}
+      </button>
+    </div>
+    <button class="menu-toggle" type="button" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()" aria-controls="mobile-navigation" [attr.aria-label]="menuOpen() ? 'Fechar menu' : 'Abrir menu'">
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
   </div>
+  <button class="menu-backdrop" type="button" [class.is-visible]="menuOpen()" (click)="closeMenu()" aria-label="Fechar menu"></button>
 </header>
 
 <main>

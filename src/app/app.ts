@@ -1,4 +1,4 @@
-import { Component, signal, AfterViewInit } from '@angular/core';
+import { Component, signal, AfterViewInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 export type Lang = 'pt' | 'en';
@@ -122,6 +122,7 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
 })
 export class App implements AfterViewInit {
   protected readonly lang = signal<Lang>('pt');
+  protected readonly menuOpen = signal(false);
   protected readonly translations = TRANSLATIONS;
   protected readonly skills = ['Angular', 'NodeJS', 'HTML', 'CSS', 'SQL', 'JavaScript', 'React'];
 
@@ -175,7 +176,21 @@ export class App implements AfterViewInit {
     });
   }
 
+  protected toggleMenu(): void {
+    this.menuOpen.update((open) => !open);
+  }
+
+  protected closeMenu(): void {
+    this.menuOpen.set(false);
+  }
+
+  @HostListener('document:keydown.escape')
+  protected closeMenuWithEscape(): void {
+    this.closeMenu();
+  }
+
   protected scrollTo(id: string): void {
+    this.closeMenu();
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   }
 }
