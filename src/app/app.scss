@@ -884,6 +884,10 @@ img {
   #sobre .container{
     height: auto;
   }
+
+  #sobre,{
+    padding-top: 0;
+  }
 }
 
 @media (max-width: 680px) {
@@ -894,6 +898,49 @@ img {
 
   .hero {
     padding: 5rem 1.5rem 4rem;
+  }
+
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'badge'
+      'media'
+      'title'
+      'subtitle'
+      'actions';
+    row-gap: 1rem;
+  }
+
+  .hero-text {
+    display: contents;
+  }
+
+  .hero-badge {
+    grid-area: badge;
+    justify-self: center;
+    margin-bottom: 0;
+  }
+
+  .hero-media {
+    grid-area: media;
+    width: 100%;
+  }
+
+  .hero-title {
+    grid-area: title;
+    width: 180%;
+    margin-bottom: 0;
+  }
+
+  .hero-subtitle {
+    grid-area: subtitle;
+    width: 180%;
+  }
+
+  .hero-actions {
+    grid-area: actions;
+    justify-self: center;
   }
 
   .brand {
@@ -997,6 +1044,16 @@ img {
       pointer-events: auto;
     }
   }
+
+  .hero-badge{
+    width: 130%;
+  }
+
+  .hero[_ngcontent-ng-c2362873275] .hero-inner[_ngcontent-ng-c2362873275] {
+    gap: 1.5rem;
+  }
+
+
 }
 
 // ---------- Reduced motion ----------
