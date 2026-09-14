@@ -26,8 +26,8 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
   pt: {
     nav: { about: 'Sobre Mim', projects: 'Projetos', contact: 'Contato', thanks: 'Agradecimento' },
     hero: {
-      title: 'Olá, eu sou Milena Medeiros',
-      subtitle: 'Desenvolvedora de sistemas em constante evolução. Neste portfólio, compartilho projetos que refletem meu aprendizado e busca por soluções eficientes e inovadoras.',
+      title: 'Desenvolvedora de sistemas',
+      subtitle: 'Neste portfólio, compartilho projetos que refletem meu aprendizado e busca por soluções eficientes e inovadoras. Seja bem-vindo(a) e fique à vontade!',
       cta: 'Sobre Mim',
       ctaLink: '#sobre'
     },
@@ -36,7 +36,7 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
       lang: 'Idiomas',
       langs: 'Inglês',
       paragraphs: [
-        'Profissional em Análise e Desenvolvimento de Sistemas com experiência no desenvolvimento de aplicações web fullstack, visualização e modelagem de bancos de dados. Entusiasta de tecnologia, resolução de problemas e otimização de processos, em busca de aprendizado contínuo.',
+        'Profissional em Análise e Desenvolvimento de Sistemas com experiência no desenvolvimento de aplicações web fullstack, visualização e modelagem de bancos de dados. Atuo na aplicação de soluções eficientes e otimização de processos, combinando conhecimento técnico e aprendizado contínuo.',
       ],
       skills: 'Tecnologias'
     },
@@ -53,7 +53,7 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
     },
     contact: {
       title: 'Contato',
-      subtitle: 'Gostou ou tem alguma dúvida? Fique à vontade para entrar em contato! Você pode me encontrar pelos seguintes canais',
+      subtitle: 'Para dúvidas, sugestões ou apenas para dizer olá, sinta-se à vontade para entrar em contato',
       emailLabel: 'E-mail',
       phoneLabel: 'Telefone',
       locationLabel: 'Localização',
@@ -70,19 +70,17 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
   en: {
     nav: { about: 'About Me', projects: 'Projects', contact: 'Contact', thanks: 'Thank You' },
     hero: {
-      title: 'Hi, I am Milena Medeiros',
-      subtitle: 'Frontend Developer passionate about creating modern, accessible and elegant digital experiences.',
-      cta: 'See Projects',
-      ctaLink: '#projetos'
+      title: 'System Developer',
+      subtitle: 'In this portfolio, I share projects that reflect my learning and search for efficient and innovative solutions. Welcome and feel free to explore!',
+      cta: 'About Me',
+      ctaLink: '#sobre'
     },
     about: {
       title: 'About Me',
       lang: 'Languages',
       langs: 'English',
       paragraphs: [
-        'I work with web development building responsive, performant applications with a strong focus on accessibility.',
-        'I have experience with Angular, TypeScript, HTML, CSS and SCSS, always pursuing best practices and clean code.',
-        'I believe technology transforms lives, and every project is an opportunity to make a difference.'
+        'Professional with experience in analysis and development of full-stack applications, data visualization and modeling. I work on applying efficient solutions and process optimization, combining technical knowledge and continuous learning.',
       ],
       skills: 'Technologies'
     },
