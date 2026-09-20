@@ -6,7 +6,7 @@
     <div class="header-controls" [class.is-open]="menuOpen()">
       <nav id="mobile-navigation" class="nav" aria-label="Main navigation">
         <a (click)="scrollTo('sobre'); $event.preventDefault()">{{ t.nav.about }}</a>
-        <a (click)="scrollTo('projetos_nav'); $event.preventDefault()">{{ t.nav.projects }}</a>
+        <a (click)="scrollTo('projetos'); $event.preventDefault()">{{ t.nav.projects }}</a>
         <a (click)="scrollTo('contato'); $event.preventDefault()">{{ t.nav.contact }}</a>
         <a (click)="scrollTo('agradecimento'); $event.preventDefault()">{{ t.nav.thanks }}</a>
       </nav>
