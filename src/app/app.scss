@@ -246,6 +246,7 @@ img {
     grid-template-columns: 1.2fr 0.8fr;
     align-items: center;
     gap: 4rem;
+    padding-top: 5%;
   }
 
   .hero-text {
@@ -889,6 +890,10 @@ img {
   #sobre{
     padding-top: 0;
   }
+
+  #contato .split-media{
+    display: none
+  }
 }
 
 @media (max-width: 680px) {
@@ -923,8 +928,12 @@ img {
 
   .hero-badge {
     grid-area: badge;
-    justify-self: center;
     margin-bottom: 0;
+    width: 44%;
+  }
+
+  .hero-badge[_ngcontent-ng-c2362873275]{
+    width: fit-content;
   }
 
   .hero-media {
@@ -934,13 +943,13 @@ img {
 
   .hero-title {
     grid-area: title;
-    width: 180%;
+    width: 100%;
     margin-bottom: 0;
   }
 
   .hero-subtitle {
     grid-area: subtitle;
-    width: 180%;
+    width: 100%;
   }
 
   .hero-actions {
@@ -1058,7 +1067,9 @@ img {
     gap: 1.5rem;
   }
 
-
+  #contato .split-media{
+    display: none
+  }
 }
 
 // ---------- Reduced motion ----------
