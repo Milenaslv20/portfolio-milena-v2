@@ -6,7 +6,7 @@
     <div class="header-controls" [class.is-open]="menuOpen()">
       <nav id="mobile-navigation" class="nav" aria-label="Main navigation">
         <a (click)="scrollTo('sobre'); $event.preventDefault()">{{ t.nav.about }}</a>
-        <a (click)="scrollTo('projetos'); $event.preventDefault()">{{ t.nav.projects }}</a>
+        <a (click)="scrollTo('projetos_nav'); $event.preventDefault()">{{ t.nav.projects }}</a>
         <a (click)="scrollTo('contato'); $event.preventDefault()">{{ t.nav.contact }}</a>
         <a (click)="scrollTo('agradecimento'); $event.preventDefault()">{{ t.nav.thanks }}</a>
       </nav>
@@ -77,7 +77,7 @@
   </section>
 
   <section id="projetos" class="section section-alt">
-    <div class="container">
+    <div class="container" id="projetos_nav">
       <h2 class="section-title-left reveal">{{ t.projects.title }}</h2>
       <div class="cards">
         <article class="card reveal" *ngFor="let project of t.projects.items; let i = index"
