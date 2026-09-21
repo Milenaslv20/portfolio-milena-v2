@@ -892,16 +892,12 @@ img {
     padding-top: 0;
   }
 
-  #contato .split-media{
-    display: none
+  #contato .split-grid .split-media {
+    display: none;
   }
 }
 
-@media (max-width: 680px) {
-  .section {
-    scroll-margin-top: 1rem;
-  }
-
+@media (max-width: 767px) {
   .header-inner {
     padding: 0.75rem 1rem;
     justify-content: space-between;
@@ -1069,7 +1065,7 @@ img {
   }
 
   #contato .split-media{
-    display: none
+    display: none !important;
   }
 }
 
