@@ -892,8 +892,11 @@ img {
     padding-top: 0;
   }
 
+}
+
+@media (max-width: 1024px) {
   .contact-media {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -1064,9 +1067,6 @@ img {
     gap: 1.5rem;
   }
 
-  .contact-media {
-    display: none;
-  }
 }
 
 // ---------- Reduced motion ----------
