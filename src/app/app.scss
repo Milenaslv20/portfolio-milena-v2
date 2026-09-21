@@ -892,7 +892,7 @@ img {
     padding-top: 0;
   }
 
-  #contato .split-grid .split-media {
+  .contact-media {
     display: none;
   }
 }
@@ -1064,9 +1064,6 @@ img {
     gap: 1.5rem;
   }
 
-  #contato .split-grid .split-media{
-    display: none !important;
-  }
 }
 
 // ---------- Reduced motion ----------
