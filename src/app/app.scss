@@ -792,11 +792,11 @@ img {
   text-align: center;
 
   .thanks-media {
-    max-width: 140px;
+    width: 190px;
     margin: 0 auto 2rem;
 
-    img {
-      animation: float 5s ease-in-out infinite;
+    img{
+      border-radius: 50%;
     }
   }
 
