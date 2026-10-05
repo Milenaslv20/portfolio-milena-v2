@@ -892,8 +892,11 @@ img {
     padding-top: 0;
   }
 
-  #contato .split-grid .split-media {
-    display: none;
+}
+
+@media (max-width: 1024px) {
+  .contact-media {
+    display: none !important;
   }
 }
 
@@ -1064,7 +1067,7 @@ img {
     gap: 1.5rem;
   }
 
-  #contato .split-grid .split-media{
+  .contact-media {
     display: none !important;
   }
 }
