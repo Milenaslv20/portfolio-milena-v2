@@ -7,6 +7,7 @@ export interface Project {
   name: string;
   description: string;
   tags: string[];
+  image: string;
   liveUrl?: string;
   repoUrl?: string;
   bgImage?: string;
@@ -43,12 +44,12 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
     projects: {
       title: 'Projetos',
       items: [
-        { name: 'E-commerce Moderno', description: 'Loja virtual completa com carrinho de compras, filtros avançados e checkout integrado.', tags: ['Angular', 'TypeScript', 'SCSS'], bgImage: 'images/project-bg/mountain.png' },
-        { name: 'Dashboard Analytics', description: 'Painel de métricas em tempo real com gráficos interativos e exportação de relatórios.', tags: ['Angular', 'Charts', 'REST API'], bgImage: 'images/project-bg/mountain.png' },
-        { name: 'App de Tarefas', description: 'Gerenciador de tarefas com modo offline, notificações e sincronização em nuvem.', tags: ['TypeScript', 'PWA', 'Firebase'], bgImage: 'images/project-bg/mountain.png' },
-        { name: 'Blog Pessoal', description: 'Plataforma de publicação com editor rico, busca por tags e modo de leitura confortável.', tags: ['Angular', 'Markdown', 'SEO'], bgImage: 'images/project-bg/mountain.png' },
-        { name: 'App de Chat', description: 'Mensageiro em tempo real com conversas privadas, notificações e envio de arquivos.', tags: ['TypeScript', 'WebSocket', 'Firebase'], bgImage: 'images/project-bg/mountain.png' },
-        { name: 'App do Clima', description: 'Previsão do tempo com geolocalização, gráficos semanais e temas claro/escuro.', tags: ['Angular', 'API', 'PWA'], bgImage: 'images/project-bg/mountain.png' }
+        { name: 'Gerador de Ordem de Serviço Aéreo', description: 'Aplicação para criação de documentos ordens de serviço aéreo de maneira automatizada.', tags: ['HTML', 'CSS', 'JavaScript', 'NodeJs'], image: 'images/project-1.png', bgImage: 'images/project-bg/mountain.png', liveUrl: 'https://gerador-ordem-servico-aereo.onrender.com/' },
+        { name: 'Dashboard Analytics', description: 'Painel de métricas em tempo real com gráficos interativos e exportação de relatórios.', tags: ['Angular', 'Charts', 'REST API'], image: 'images/project-2.svg', bgImage: 'images/project-bg/mountain.png', liveUrl: 'https://www.google.com' },
+        { name: 'App de Tarefas', description: 'Gerenciador de tarefas com modo offline, notificações e sincronização em nuvem.', tags: ['TypeScript', 'PWA', 'Firebase'], image: 'images/project-3.svg', bgImage: 'images/project-bg/mountain.png', liveUrl: 'https://www.google.com' },
+        { name: 'Blog Pessoal', description: 'Plataforma de publicação com editor rico, busca por tags e modo de leitura confortável.', tags: ['Angular', 'Markdown', 'SEO'], image: 'images/project-4.svg', bgImage: 'images/project-bg/mountain.png', liveUrl: 'https://www.google.com' },
+        { name: 'App de Chat', description: 'Mensageiro em tempo real com conversas privadas, notificações e envio de arquivos.', tags: ['TypeScript', 'WebSocket', 'Firebase'], image: 'images/project-5.svg', bgImage: 'images/project-bg/mountain.png', liveUrl: 'https://www.google.com' },
+        { name: 'App do Clima', description: 'Previsão do tempo com geolocalização, gráficos semanais e temas claro/escuro.', tags: ['Angular', 'API', 'PWA'], image: 'images/project-6.svg', bgImage: 'images/project-bg/mountain.png', liveUrl: 'https://www.google.com' }
       ]
     },
     contact: {
@@ -87,12 +88,12 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
     projects: {
       title: 'Projects',
       items: [
-        { name: 'Modern E-commerce', description: 'Full online store with shopping cart, advanced filters and integrated checkout.', tags: ['Angular', 'TypeScript', 'SCSS'], bgImage: 'images/project-bg/mountain.png' },
-        { name: 'Analytics Dashboard', description: 'Real-time metrics panel with interactive charts and report export.', tags: ['Angular', 'Charts', 'REST API'], bgImage: 'images/project-bg/mountain.png' },
-        { name: 'Task Manager', description: 'Task manager with offline mode, notifications and cloud sync.', tags: ['TypeScript', 'PWA', 'Firebase'], bgImage: 'images/project-bg/mountain.png' },
-        { name: 'Personal Blog', description: 'Publishing platform with rich editor, tag search and comfortable reading mode.', tags: ['Angular', 'Markdown', 'SEO'], bgImage: 'images/project-bg/mountain.png' },
-        { name: 'Chat App', description: 'Real-time messenger with private conversations, notifications and file sharing.', tags: ['TypeScript', 'WebSocket', 'Firebase'], bgImage: 'images/project-bg/mountain.png' },
-        { name: 'Weather App', description: 'Weather forecast with geolocation, weekly charts and light/dark themes.', tags: ['Angular', 'API', 'PWA'], bgImage: 'images/project-bg/mountain.png' }
+        { name: 'Aero Service Order Generator', description: 'Application for creating automated aero service orders documents.', tags: ['HTML', 'CSS', 'JavaScript', 'NodeJs'], image: 'images/project-1.png', bgImage: 'images/project-bg/mountain.png', liveUrl: 'https://gerador-ordem-servico-aereo.onrender.com/' },
+        { name: 'Analytics Dashboard', description: 'Real-time metrics panel with interactive charts and report export.', tags: ['Angular', 'Charts', 'REST API'], image: 'images/project-2.svg', bgImage: 'images/project-bg/mountain.png', liveUrl: 'https://www.google.com' },
+        { name: 'Task Manager', description: 'Task manager with offline mode, notifications and cloud sync.', tags: ['TypeScript', 'PWA', 'Firebase'], image: 'images/project-3.svg', bgImage: 'images/project-bg/mountain.png', liveUrl: 'https://www.google.com' },
+        { name: 'Personal Blog', description: 'Publishing platform with rich editor, tag search and comfortable reading mode.', tags: ['Angular', 'Markdown', 'SEO'], image: 'images/project-4.svg', bgImage: 'images/project-bg/mountain.png', liveUrl: 'https://www.google.com' },
+        { name: 'Chat App', description: 'Real-time messenger with private conversations, notifications and file sharing.', tags: ['TypeScript', 'WebSocket', 'Firebase'], image: 'images/project-5.svg', bgImage: 'images/project-bg/mountain.png', liveUrl: 'https://www.google.com' },
+        { name: 'Weather App', description: 'Weather forecast with geolocation, weekly charts and light/dark themes.', tags: ['Angular', 'API', 'PWA'], image: 'images/project-6.svg', bgImage: 'images/project-bg/mountain.png', liveUrl: 'https://www.google.com' }
       ]
     },
     contact: {
@@ -185,6 +186,12 @@ export class App implements AfterViewInit {
   @HostListener('document:keydown.escape')
   protected closeMenuWithEscape(): void {
     this.closeMenu();
+  }
+
+  protected openProject(project: Project): void {
+    if (project.liveUrl) {
+      window.open(project.liveUrl, '_blank', 'noopener');
+    }
   }
 
   protected scrollTo(id: string): void {

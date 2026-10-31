@@ -82,12 +82,17 @@
       <div class="cards">
         <article class="card reveal" *ngFor="let project of t.projects.items; let i = index"
           [class.reveal-left]="i % 2 === 0"
-          [class.reveal-right]="i % 2 === 1">
+          [class.reveal-right]="i % 2 === 1"
+          [class.card--clickable]="project.liveUrl"
+          [attr.role]="project.liveUrl ? 'link' : null"
+          [attr.tabindex]="project.liveUrl ? 0 : null"
+          (click)="openProject(project)"
+          (keydown.enter)="openProject(project)">
           <div class="card-bg">
             <img *ngIf="project.bgImage" [src]="project.bgImage" alt="" />
           </div>
           <div class="card-media">
-            <img [src]="'images/project-' + (i + 1) + '.svg'" [alt]="project.name" />
+            <img [src]="project.image" [alt]="project.name" />
           </div>
 
           <div class="card-body">
@@ -99,10 +104,10 @@
               </div>
             </div>
             <div class="card-links" *ngIf="project.liveUrl || project.repoUrl">
-              <a class="card-link" *ngIf="project.liveUrl" [href]="project.liveUrl" target="_blank" rel="noopener">
+              <a class="card-link" *ngIf="project.liveUrl" [href]="project.liveUrl" target="_blank" rel="noopener" (click)="$event.stopPropagation()">
                 {{ lang() === 'pt' ? 'Ver Projeto' : 'View Project' }} <span class="card-link-arrow">&rsaquo;</span>
               </a>
-              <a class="card-link card-link--outline" *ngIf="project.repoUrl" [href]="project.repoUrl" target="_blank" rel="noopener">
+              <a class="card-link card-link--outline" *ngIf="project.repoUrl" [href]="project.repoUrl" target="_blank" rel="noopener" (click)="$event.stopPropagation()">
                 {{ lang() === 'pt' ? 'Código' : 'Code' }}
               </a>
             </div>
