@@ -1415,3 +1415,196 @@ img {
     display: none;
   }
 }
+
+// ---------- About highlights panel ----------
+.panel-eyebrow {
+  margin: 0 0 1rem;
+  font-family: $font-mono;
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: $accent-text;
+}
+
+.highlights-panel {
+  position: relative;
+  padding: 1.75rem;
+  border-radius: 20px;
+  background: rgba(var(--surface-rgb), 0.75);
+  border: 1px solid rgba(var(--text-rgb), 0.1);
+  box-shadow: 0 24px 48px rgba(var(--shadow-rgb), 0.25);
+  backdrop-filter: blur(10px);
+}
+
+.highlights {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+}
+
+.highlight {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1.1rem;
+  border-radius: 14px;
+  background: $bg;
+  border: 1px solid rgba(var(--text-rgb), 0.08);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: rgba(#ec4899, 0.35);
+    box-shadow: 0 12px 28px rgba(#ec4899, 0.15);
+
+    .highlight-icon {
+      background: linear-gradient(135deg, $accent, #ec4899);
+      color: #fff;
+    }
+  }
+}
+
+.highlight-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba($accent, 0.14);
+  color: $accent-text;
+  transition: background 0.3s ease, color 0.3s ease;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.highlight-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+
+  strong {
+    font-family: $font-display;
+    font-size: 1rem;
+  }
+
+  span {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    opacity: 0.75;
+  }
+}
+
+@media (max-width: 767px) {
+  .highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .highlights-panel {
+    padding: 1.4rem;
+  }
+}
+
+// ---------- Contact orbit illustration ----------
+.contact-orbit {
+  position: relative;
+  width: min(100%, 380px);
+  aspect-ratio: 1;
+  margin: 0 auto;
+}
+
+.orbit-glow {
+  position: absolute;
+  inset: 20%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba($accent, 0.45) 0%, rgba(#ec4899, 0.2) 50%, transparent 72%);
+  filter: blur(30px);
+}
+
+.orbit-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed rgba(var(--text-rgb), 0.18);
+
+  &--outer {
+    inset: 0;
+    animation: orbit-spin 28s linear infinite;
+
+    .orbit-node {
+      animation: orbit-spin 28s linear infinite reverse;
+    }
+  }
+
+  &--inner {
+    inset: 22%;
+    animation: orbit-spin 18s linear infinite reverse;
+
+    .orbit-node {
+      animation: orbit-spin 18s linear infinite;
+    }
+  }
+}
+
+.orbit-node {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin: -26px 0 0 -26px;
+  border-radius: 16px;
+  background: $surface;
+  border: 1px solid rgba(var(--text-rgb), 0.12);
+  box-shadow: 0 12px 28px rgba(var(--shadow-rgb), 0.3);
+  color: $accent-text;
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  // Positions on the ring (center of the node sits on the circle)
+  &--a { top: 0; left: 50%; }
+  &--b { top: 75%; left: 6.7%; color: #ec4899; }
+  &--c { top: 50%; left: 100%; }
+}
+
+.orbit-core {
+  position: absolute;
+  inset: 37%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, $accent-strong, #ec4899);
+  color: #fff;
+  font-family: $font-display;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 0 0 10px rgba($accent, 0.12), 0 20px 50px rgba(#ec4899, 0.3);
+}
+
+@keyframes orbit-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 860px) {
+  .contact-orbit {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit-ring,
+  .orbit-node {
+    animation: none !important;
+  }
+}

@@ -13,10 +13,16 @@ export interface Project {
   bgImage?: string;
 }
 
+export interface Highlight {
+  icon: 'code' | 'chart' | 'database' | 'gear';
+  title: string;
+  text: string;
+}
+
 export interface Translation {
   nav: { about: string; projects: string; contact: string; thanks: string };
   hero: { title: string; subtitle: string; cta: string; ctaLink: string };
-  about: { title: string; lang: string; paragraphs: string[]; skills: string; langs: string };
+  about: { title: string; lang: string; paragraphs: string[]; skills: string; langs: string; highlightsLabel: string; highlights: Highlight[] };
   projects: { title: string; items: Project[] };
   contact: { title: string; subtitle: string; emailLabel: string; phoneLabel: string; locationLabel: string; linkedinLabel: string };
   thanks: { title: string; message: string; cta: string };
@@ -39,7 +45,14 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
       paragraphs: [
         'Profissional em Análise e Desenvolvimento de Sistemas com experiência no desenvolvimento de aplicações web fullstack, visualização e modelagem de bancos de dados. Atuo na aplicação de soluções eficientes e otimização de processos, combinando conhecimento técnico e aprendizado contínuo.',
       ],
-      skills: 'Tecnologias'
+      skills: 'Tecnologias',
+      highlightsLabel: 'O que eu faço',
+      highlights: [
+        { icon: 'code', title: 'Fullstack web', text: 'Aplicações completas, do front-end ao back-end.' },
+        { icon: 'chart', title: 'Visualização de dados', text: 'Relatórios e painéis que tornam dados claros.' },
+        { icon: 'database', title: 'Bancos de dados', text: 'Modelagem e consultas bem estruturadas.' },
+        { icon: 'gear', title: 'Processos', text: 'Soluções eficientes e automação de tarefas.' }
+      ]
     },
     projects: {
       title: 'Projetos',
@@ -80,7 +93,14 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
       paragraphs: [
         'Professional with experience in analysis and development of full-stack applications, data visualization and modeling. I work on applying efficient solutions and process optimization, combining technical knowledge and continuous learning.',
       ],
-      skills: 'Technologies'
+      skills: 'Technologies',
+      highlightsLabel: 'What I do',
+      highlights: [
+        { icon: 'code', title: 'Full-stack web', text: 'Complete applications, from front-end to back-end.' },
+        { icon: 'chart', title: 'Data visualization', text: 'Reports and dashboards that make data clear.' },
+        { icon: 'database', title: 'Databases', text: 'Data modeling and well-structured queries.' },
+        { icon: 'gear', title: 'Processes', text: 'Efficient solutions and task automation.' }
+      ]
     },
     projects: {
       title: 'Projects',
