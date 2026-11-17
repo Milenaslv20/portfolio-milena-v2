@@ -2,7 +2,7 @@
 name: Milena Medeiros Portfolio
 description: Dark professional portfolio showcasing systems development with ambient gradient atmosphere
 colors:
-  primary: "#E6501B"
+  primary: "#8b5cf6"
   ambient-purple: "#7c3aed"
   ambient-pink: "#ec4899"
   ambient-blue: "#3b82f6"
@@ -70,21 +70,21 @@ components:
 
 This portfolio embodies a refined, dimly-lit creative workshop where craft is revealed through careful illumination. The dark canvas (#1f2020) creates a focused, distraction-free environment that puts Milena's work center stage. Professional warmth emerges not through decoration but through precise, human-centered interactions — every hover state, every transition, every glow effect serves a purpose.
 
-The aesthetic philosophy uses a dual-palette system: Signal Orange for interactive direction, and a purple-pink-blue ambient palette for atmospheric depth. Technical competence is demonstrated through clean code and smooth animations, while human approachability lives in the soft, tactile component language and warm ambient glow.
+The aesthetic philosophy uses a dual-palette system: Signal Violet for interactive direction, and a purple-pink-blue ambient palette for atmospheric depth. Technical competence is demonstrated through clean code and smooth animations, while human approachability lives in the soft, tactile component language and warm ambient glow.
 
 **Key Characteristics:**
 - Dark, focused canvas that eliminates visual noise
-- Signal Orange (#E6501B) for interactive highlights and directional cues
+- Signal Violet (#8b5cf6) for interactive highlights and directional cues
 - Ambient gradient orbs (purple, pink, blue) for atmospheric depth
 - Soft, pill-shaped components with dramatic hover interactions
 - Bilingual support (PT/EN) with seamless toggle
 
 ## Colors
 
-A dual-palette system: Signal Orange for interactive direction, ambient gradient colors for atmospheric depth.
+A dual-palette system: Signal Violet for interactive direction, ambient gradient colors for atmospheric depth.
 
 ### Primary (Interactive)
-- **Signal Orange** (#E6501B): Interactive highlights — focus-visible outlines, card hover shadows, contact hover glows, section title accents. Used for states that respond to user action.
+- **Signal Violet** (#E6501B): Interactive highlights — focus-visible outlines, card hover shadows, contact hover glows, section title accents. Used for states that respond to user action.
 
 ### Ambient (Atmospheric)
 - **Orb Purple** (#7c3aed): Hero and section gradient orbs, nav underline gradient start. Decorative, not interactive.
@@ -99,7 +99,7 @@ A dual-palette system: Signal Orange for interactive direction, ambient gradient
 - **Subtle Border** (rgba(255,255,255,0.12)): Dividers, card borders, input borders. Visible enough to define edges without competing.
 
 ### Named Rules
-**The Signal Orange Rule.** The primary accent appears on ≤15% of any given screen. Its rarity is the point — it draws the eye to interactive moments, not decorative surfaces.
+**The Signal Violet Rule.** The primary accent appears on ≤15% of any given screen. Its rarity is the point — it draws the eye to interactive moments, not decorative surfaces.
 **The Ambient Rule.** Gradient orbs are decorative atmosphere, not interactive signals. They never carry clickable content or state changes.
 
 ## Typography
@@ -144,7 +144,7 @@ The system uses **ambient depth** — gradient orbs, deep shadows, and blurred i
 ### Shadow Vocabulary
 - **Gradient Orbs** (hero, about sections): Large (450–600px) blurred radial-gradient circles in purple, pink, and blue. Float with subtle animation. Create atmospheric depth behind content.
 - **Card Hover Glow** (`box-shadow: 0 16px 40px rgba(0,0,0,0.5)`): Dark shadow lift on card hover. Cards also reveal a blurred background image (frosted glass effect).
-- **Contact Hover Glow** (`box-shadow: 0 9px 24px rgba(230,80,27,0.4)`): Subtle orange shadow on contact item hover.
+- **Contact Hover Glow** (`box-shadow: 0 9px 24px rgba(236,72,153,0.2)`): Subtle pink-violet shadow on contact item hover.
 - **Button Hover Glow** (`box-shadow: 0 12px 28px rgba(0,0,0,0.5)`): Dark shadow lift on button hover.
 
 ### Named Rules
@@ -170,7 +170,7 @@ A soft, approachable form language defined by generous border-radius and pill-sh
 - **Shape:** Pill-shaped (999px radius)
 - **Primary:** Surface background (#2d2d2d) with white text, 12px 32px padding
 - **Hover:** White background with dark text, slide-in gradient effect, 3px upward lift, dark ambient shadow
-- **Focus:** Orange glow border (0 0 16px rgba(255,255,255,0.25))
+- **Focus:** Violet glow border (0 0 16px rgba(255,255,255,0.25))
 
 ### Chips / Tags
 - **Style:** Surface background, white text, pill-shaped, 7px 17px padding
@@ -186,7 +186,7 @@ A soft, approachable form language defined by generous border-radius and pill-sh
 
 ### Contact Items
 - **Style:** Surface background, left-aligned icon + text layout, 14px radius
-- **Hover:** 8px rightward shift, orange glow, icon rotates and brightens
+- **Hover:** 8px rightward shift, pink-violet glow, icon rotates and brightens
 
 ### Navigation
 - **Style:** Sticky header with backdrop blur (12px), surface background at 85% opacity
@@ -208,7 +208,7 @@ A soft, approachable form language defined by generous border-radius and pill-sh
 ## Do's and Don'ts
 
 ### Do:
-- **Do** use Signal Orange for interactive highlights and directional cues (focus, hover states, active indicators)
+- **Do** use Signal Violet for interactive highlights and directional cues (focus, hover states, active indicators)
 - **Do** use ambient gradient orbs (purple, pink, blue) for atmospheric depth — decorative, never interactive
 - **Do** maintain the pill shape (999px radius) for all interactive triggers (buttons, chips, toggles)
 - **Do** use ambient depth (gradient orbs, hover shadows, card blur) to create atmospheric layering
@@ -217,10 +217,10 @@ A soft, approachable form language defined by generous border-radius and pill-sh
 - **Do** center content in the 1100px container with generous vertical rhythm (5rem sections)
 
 ### Don't:
-- **Don't** use Signal Orange for decorative purposes — it's for interactive states only
+- **Don't** use Signal Violet for decorative purposes — it's for interactive states only
 - **Don't** use ambient orb colors for interactive elements — they're atmospheric, not functional
 - **Don't** use sharp corners on interactive elements — pill shapes are the component language
 - **Don't** apply shadows at rest — flat surfaces are the default state
-- **Don't** exceed 15% screen coverage with the orange accent — its rarity is the point
+- **Don't** exceed 15% screen coverage with the violet accent — its rarity is the point
 - **Don't** use decorative typography — the system font stack is a performance and consistency choice
 - **Don't** break the vertical rhythm — 5rem section spacing creates the breathing room

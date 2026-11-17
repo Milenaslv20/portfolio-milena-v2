@@ -39,18 +39,55 @@
     <div class="hero-orb hero-orb--purple"></div>
     <div class="hero-orb hero-orb--pink"></div>
     <div class="hero-orb hero-orb--blue"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
     <div class="container">
       <div class="hero-inner">
         <div class="hero-text">
-          <p class="hero-badge reveal">{{ lang() === 'pt' ? 'Milena\'s Portfólio' : 'Milena\'s Portfolio' }}</p>
-          <h1 class="hero-title reveal">{{ t.hero.title }}</h1>
+          <p class="hero-badge reveal"><span class="hero-badge-dot"></span>{{ lang() === 'pt' ? 'Portfólio' : 'Portfolio' }}</p>
+          <p class="hero-greeting reveal">{{ lang() === 'pt' ? 'Olá, eu sou' : 'Hi, I\'m' }}</p>
+          <h1 class="hero-title reveal">
+            <span class="hero-name">Milena Medeiros</span>
+            <span class="hero-role">{{ t.hero.title }}</span>
+          </h1>
           <p class="hero-subtitle reveal">{{ t.hero.subtitle }}</p>
           <div class="hero-actions reveal">
-            <a class="btn" href="{{ t.hero.ctaLink }}">{{ t.hero.cta }}</a>
+            <a class="btn btn--primary" href="#projetos" (click)="scrollTo('projetos'); $event.preventDefault()">{{ lang() === 'pt' ? 'Ver projetos' : 'View projects' }}</a>
+            <a class="btn" href="{{ t.hero.ctaLink }}" (click)="scrollTo('sobre'); $event.preventDefault()">{{ t.hero.cta }}</a>
           </div>
+          <ul class="hero-stack reveal" [attr.aria-label]="t.about.skills">
+            @for (s of skills; track s) {
+              <li>{{ s }}</li>
+            }
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="code-card">
+            <div class="code-card-bar">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+              <span class="code-card-file">milena.ts</span>
+            </div>
+            <pre class="code-card-body"><code><span class="tk-kw">const</span> <span class="tk-var">milena</span> = &#123;
+  <span class="tk-prop">{{ lang() === 'pt' ? 'cargo' : 'role' }}</span>: <span class="tk-str">'{{ t.hero.title }}'</span>,
+  <span class="tk-prop">stack</span>: [<span class="tk-str">'Angular'</span>, <span class="tk-str">'NodeJS'</span>, <span class="tk-str">'SQL'</span>],
+  <span class="tk-prop">{{ lang() === 'pt' ? 'foco' : 'focus' }}</span>: [<span class="tk-str">'fullstack'</span>, <span class="tk-str">'{{ lang() === 'pt' ? 'dados' : 'data' }}'</span>],
+  <span class="tk-prop">{{ lang() === 'pt' ? 'idiomas' : 'languages' }}</span>: [<span class="tk-str">'{{ lang() === 'pt' ? 'Português' : 'Portuguese' }}'</span>, <span class="tk-str">'{{ lang() === 'pt' ? 'Inglês' : 'English' }}'</span>],
+  <span class="tk-prop">{{ lang() === 'pt' ? 'aprendendo' : 'learning' }}</span>: <span class="tk-kw">true</span>,
+&#125;;
+
+<span class="tk-var">milena</span>.<span class="tk-fn">{{ lang() === 'pt' ? 'construir' : 'build' }}</span>(<span class="tk-str">'{{ lang() === 'pt' ? 'soluções eficientes' : 'efficient solutions' }}'</span>);<span class="code-caret"></span></code></pre>
+          </div>
+          <span class="float-chip float-chip--a">&lt;/&gt;</span>
+          <span class="float-chip float-chip--b">&#123; &#125;</span>
+          <span class="float-chip float-chip--c">SQL</span>
         </div>
       </div>
     </div>
+    <button class="scroll-cue" type="button" (click)="scrollTo('sobre')" [attr.aria-label]="lang() === 'pt' ? 'Rolar para Sobre Mim' : 'Scroll to About Me'">
+      <span></span>
+    </button>
   </section>
 
   <section id="sobre" class="section section--orbs">

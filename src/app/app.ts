@@ -44,9 +44,9 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
     projects: {
       title: 'Projetos',
       items: [
-        { name: 'Gerador de Ordem de Serviço Aéreo', description: 'Aplicação para criação de documentos ordens de serviço aéreo de maneira automatizada.', tags: ['HTML', 'CSS', 'JavaScript', 'NodeJs'], image: 'images/project-1.png', bgImage: 'images/project-bg/mountain.png', liveUrl: 'https://gerador-ordem-servico-aereo.onrender.com/' },
-        { name: 'Relatório de dados de crimes ambientais', description: 'Relatório detalhado sobre dados de crimes ambientais coletados e informativos sobre a importância de denúncias.', tags: ['HTML', 'CSS', 'JavaScript', 'PowerBI', 'Excel', 'Figma'], image: 'images/project-2.png', bgImage: 'images/project-bg/mountain.png', liveUrl: 'https://milenaslv20.github.io/Relatorio-Ambiental/' },
-        { name: 'App de Tarefas', description: 'Gerenciador de tarefas com modo offline, notificações e sincronização em nuvem.', tags: ['TypeScript', 'PWA', 'Firebase'], image: 'images/project-3.svg', bgImage: 'images/project-bg/mountain.png', liveUrl: 'https://www.google.com' },
+        { name: 'Gerador de Ordem de Serviço Aéreo', description: 'Aplicação para criação de documentos ordens de serviço aéreo de maneira automatizada.', tags: ['HTML', 'CSS', 'JavaScript', 'NodeJs'], image: 'images/project-1.png', bgImage: 'images/project-bg/gradient.svg', liveUrl: 'https://gerador-ordem-servico-aereo.onrender.com/' },
+        { name: 'Relatório de dados de crimes ambientais', description: 'Relatório detalhado sobre dados de crimes ambientais coletados e informativos sobre a importância de denúncias.', tags: ['HTML', 'CSS', 'JavaScript', 'PowerBI', 'Excel', 'Figma'], image: 'images/project-2.png', bgImage: 'images/project-bg/gradient.svg', liveUrl: 'https://milenaslv20.github.io/Relatorio-Ambiental/' },
+        { name: 'App de Tarefas', description: 'Gerenciador de tarefas com modo offline, notificações e sincronização em nuvem.', tags: ['TypeScript', 'PWA', 'Firebase'], image: 'images/project-3.svg', bgImage: 'images/project-bg/gradient.svg', liveUrl: 'https://www.google.com' },
       ]
     },
     contact: {
@@ -85,9 +85,9 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
     projects: {
       title: 'Projects',
       items: [
-        { name: 'Aero Service Order Generator', description: 'Application for creating automated aero service orders documents.', tags: ['HTML', 'CSS', 'JavaScript', 'NodeJs'], image: 'images/project-1.png', bgImage: 'images/project-bg/mountain.png', liveUrl: 'https://gerador-ordem-servico-aereo.onrender.com/' },
-        { name: 'Ambiental Crime Report', description: 'Detailed report on environmental crime data collected and information on the importance of reports.', tags: ['HTML', 'CSS', 'JavaScript', 'PowerBI', 'Excel', 'Figma'], image: 'images/project-2.png', bgImage: 'images/project-bg/mountain.png', liveUrl: 'https://milenaslv20.github.io/Relatorio-Ambiental/' },
-        { name: 'Task Manager', description: 'Task manager with offline mode, notifications and cloud sync.', tags: ['TypeScript', 'PWA', 'Firebase'], image: 'images/project-3.svg', bgImage: 'images/project-bg/mountain.png', liveUrl: 'https://www.google.com' },
+        { name: 'Aero Service Order Generator', description: 'Application for creating automated aero service orders documents.', tags: ['HTML', 'CSS', 'JavaScript', 'NodeJs'], image: 'images/project-1.png', bgImage: 'images/project-bg/gradient.svg', liveUrl: 'https://gerador-ordem-servico-aereo.onrender.com/' },
+        { name: 'Ambiental Crime Report', description: 'Detailed report on environmental crime data collected and information on the importance of reports.', tags: ['HTML', 'CSS', 'JavaScript', 'PowerBI', 'Excel', 'Figma'], image: 'images/project-2.png', bgImage: 'images/project-bg/gradient.svg', liveUrl: 'https://milenaslv20.github.io/Relatorio-Ambiental/' },
+        { name: 'Task Manager', description: 'Task manager with offline mode, notifications and cloud sync.', tags: ['TypeScript', 'PWA', 'Firebase'], image: 'images/project-3.svg', bgImage: 'images/project-bg/gradient.svg', liveUrl: 'https://www.google.com' },
       ]
     },
     contact: {
