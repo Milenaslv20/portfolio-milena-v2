@@ -116,6 +116,9 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
 export class App implements AfterViewInit {
   protected readonly lang = signal<Lang>('pt');
   protected readonly menuOpen = signal(false);
+  protected readonly theme = signal<'dark' | 'light'>(
+    document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark'
+  );
   protected readonly translations = TRANSLATIONS;
   protected readonly skills = ['Angular', 'NodeJS', 'HTML', 'CSS', 'SQL', 'JavaScript', 'React'];
 
@@ -166,6 +169,19 @@ export class App implements AfterViewInit {
       const el = document.getElementById(id);
       if (el) sectionObserver.observe(el);
     });
+  }
+
+  protected toggleTheme(): void {
+    const next = this.theme() === 'dark' ? 'light' : 'dark';
+    this.theme.set(next);
+    if (next === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+    try {
+      localStorage.setItem('theme', next);
+    } catch {}
   }
 
   protected toggleLang(): void {
