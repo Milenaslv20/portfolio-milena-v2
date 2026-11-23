@@ -59,7 +59,7 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
       items: [
         { name: 'Gerador de Ordem de Serviço Aéreo', description: 'Aplicação para criação de documentos ordens de serviço aéreo de maneira automatizada.', tags: ['HTML', 'CSS', 'JavaScript', 'NodeJs'], image: 'images/project-1.png', bgImage: 'images/project-bg/gradient.svg', liveUrl: 'https://gerador-ordem-servico-aereo.onrender.com/' },
         { name: 'Relatório de dados de crimes ambientais', description: 'Relatório detalhado sobre dados de crimes ambientais coletados e informativos sobre a importância de denúncias.', tags: ['HTML', 'CSS', 'JavaScript', 'PowerBI', 'Excel', 'Figma'], image: 'images/project-2.png', bgImage: 'images/project-bg/gradient.svg', liveUrl: 'https://milenaslv20.github.io/Relatorio-Ambiental/' },
-        { name: 'App de Tarefas', description: 'Gerenciador de tarefas com modo offline, notificações e sincronização em nuvem.', tags: ['TypeScript', 'PWA', 'Firebase'], image: 'images/project-3.svg', bgImage: 'images/project-bg/gradient.svg', liveUrl: 'https://www.google.com' },
+        { name: 'Registro de Funcionários', description: 'Sistema de gerenciamento de funcionários com cadastro, atualização e exclusão de informações. Usuário de acesso no repositório Github', tags: ['HTML', 'CSS', 'JavaScript', 'NodeJs'], image: 'images/project-3.png', bgImage: 'images/project-bg/gradient.svg', liveUrl: 'https://vertix-web.onrender.com' },
       ]
     },
     contact: {
@@ -107,7 +107,7 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
       items: [
         { name: 'Aero Service Order Generator', description: 'Application for creating automated aero service orders documents.', tags: ['HTML', 'CSS', 'JavaScript', 'NodeJs'], image: 'images/project-1.png', bgImage: 'images/project-bg/gradient.svg', liveUrl: 'https://gerador-ordem-servico-aereo.onrender.com/' },
         { name: 'Ambiental Crime Report', description: 'Detailed report on environmental crime data collected and information on the importance of reports.', tags: ['HTML', 'CSS', 'JavaScript', 'PowerBI', 'Excel', 'Figma'], image: 'images/project-2.png', bgImage: 'images/project-bg/gradient.svg', liveUrl: 'https://milenaslv20.github.io/Relatorio-Ambiental/' },
-        { name: 'Task Manager', description: 'Task manager with offline mode, notifications and cloud sync.', tags: ['TypeScript', 'PWA', 'Firebase'], image: 'images/project-3.svg', bgImage: 'images/project-bg/gradient.svg', liveUrl: 'https://www.google.com' },
+        { name: 'Employee Registration System', description: 'Employee management system with registration, update and deletion of information. User access available in the GitHub repository.', tags: ['HTML', 'CSS', 'JavaScript', 'NodeJs'], image: 'images/project-3.png', bgImage: 'images/project-bg/gradient.svg', liveUrl: 'https://vertix-web.onrender.com' },
       ]
     },
     contact: {
